@@ -1,16 +1,41 @@
-const searchBar = document.getElementById('search');
+const searchBar = document.getElementById('search-bar');
+
+const info = document.getElementById('info');
+
+const reset = document.getElementById('reset-btn');
+
+
 
 function searchBrewery(search){
-    const url = `https://api.openbrewerydb.org/breweries/autocomplete?query=${search}`
+    const url = `https://api.openbrewerydb.org/breweries/search?query=${search}`
     fetch(url)
     .then(resp => resp.json())
     .then((data) => {
-        console.log(data)
+        const results = data.map(element => element.name)
+        renderResults(results);
+    })
+    .catch((error) => 
+    console.log(error));
+};
+
+function renderResults(results){
+    results.forEach( results => {
+        // info.textContent = '';
+        const element = document.createElement('li');
+        element.textContent = results;
+        info.append(element);
     })
 };
-searchBrewery('new york');
 
-searchBar.addEventListener(onkeyup, event => {
-    console.log(event);
+
+
+searchBar.addEventListener('keyup', e => {
+    searchBrewery(searchBar.value);
 });
 
+
+reset.addEventListener('click', event => {
+    // info.textContent = '';
+    // searchBar.value.textContent = '';
+    window.location.reload();
+});
