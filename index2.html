@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery Finder</title>
+    <script deffer src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <H1>Welcome to Brewery Finder!</H1>
+        <h2>Find info about breweries near ou!</h2> 
+        <h3>Submit information below to find breweries</h3>
+    </header>
+        <div id="form-container">
+        <form>
+            <br />
+            <input type="text" id="name" placeholder="Search a Brewer Name">
+            <br />
+            <input type="text" id="size" placeholder="Search a Brewery Size">
+            <br />
+            <input type="text" id="text" placeholder="Search a Brewery Address">
+            <br />
+            <input type="text" id="state" placeholder=" Search a Brewery State">
+            <br />
+            <input type="text" id="city" placeholder="Search a Brewery City">
+            <br />
+            <input type="text" id="url" placeholder=" Search a Brewery's URL">
+            <br />
+            <button type="sumbit" id="search">Search</button> 
+        </form>
+        </div>
+        <div id="append-info">
+            <ul id="info">
+                <li id="append-name">Name</li>
+                <li id="append-size">Brewery Size</li>
+                <li id="append-address">Address</li>
+                <li id="append-state">State</li>
+                <li id="append-city">City</li>
+                <li id="append-url">URL</li>
+                <button id="reset-btn">Reset</button>
+            </ul>
+        </div>
+</body>
+</html>

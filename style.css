@@ -1,0 +1,22 @@
+#header {
+    padding: 40px;
+    text-align: center;
+}
+
+#form-container {
+    text-align: center;
+    
+}
+
+#append-info {
+    display: table;
+    margin: 0 auto;
+}
+
+#search-bar {
+    width: 70%; 
+    overflow: hidden; 
+    text-align: center;
+    text-emphasis-color: black;
+}
+
