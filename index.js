@@ -11,8 +11,8 @@ function searchBrewery(search){
     fetch(url)
     .then(resp => resp.json())
     .then((data) => {
-        const results = data.map(element => element.name)
-        renderResults(results);
+        const name = data.map(element => element.name)
+        renderResults(name);
     })
     .catch((error) => 
     console.log(error));

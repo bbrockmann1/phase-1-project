@@ -11,13 +11,10 @@
 #append-info {
     width: 70%;
     height: 700px; 
-    background-color: purple;
+    /* background-color: purple; */
     display: table;
     margin: 0 auto;
     
-}
-#info{
-    overflow: scroll;
 }
 
 #search-bar {
