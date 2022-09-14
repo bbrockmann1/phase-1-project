@@ -20,7 +20,6 @@ function searchBrewery(search){
     })
     .catch((error) => 
     console.log(error));
-
     
 };
 
@@ -55,11 +54,25 @@ reset.addEventListener('click', event => {
     window.location.reload();
 });
 
+
+function secondFetch(search){
+    const url = `https://api.openbrewerydb.org/breweries/${search}`;
+    fetch(url)
+    .then(resp => resp.json())
+    .then(secondEle => {console.log(secondEle)})
+};
+secondFetch('madtree-brewing-cincinnati')
+
 document.addEventListener('click',function(e){
     if(e.target && e.target.id== 'newId'){
           const dynamicCreate = document.createElement('li');
           dynamicCreate.setAttribute('id', 'object');
           brewObjs.append(dynamicCreate);
-          brewObjs.textContent = element;
+          brewObjs.textContent = searchBrewery();
      }
  });
+
+ //what we need:
+
+ //show object for the name of brewery thats clicked on.
+ //display that obj in 'object' id
