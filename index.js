@@ -46,3 +46,5 @@ reset.addEventListener('click', event => {
     // searchBar.value.textContent = '';
     window.location.reload();
 });
+
+//stupuid change
