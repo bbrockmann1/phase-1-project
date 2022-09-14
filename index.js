@@ -4,6 +4,10 @@ const info = document.getElementById('info');
 const reset = document.getElementById('reset-btn');
 const newId = document.getElementById('newId');
 
+const brewObjs = document.getElementById('brewObjs');
+const dynamicLi = document.getElementById('object');
+
+
 // possibly target names by city/brewery name. Right now search is pulling up anything that includes the first two letters
 
 function searchBrewery(search){
@@ -16,6 +20,8 @@ function searchBrewery(search){
     })
     .catch((error) => 
     console.log(error));
+
+    
 };
 
 function renderResults(results){
@@ -51,6 +57,9 @@ reset.addEventListener('click', event => {
 
 document.addEventListener('click',function(e){
     if(e.target && e.target.id== 'newId'){
-          console.log(e);
+          const dynamicCreate = document.createElement('li');
+          dynamicCreate.setAttribute('id', 'object');
+          brewObjs.append(dynamicCreate);
+          brewObjs.textContent = element;
      }
  });

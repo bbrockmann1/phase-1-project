@@ -15,19 +15,21 @@
     text-emphasis-color: black;
 }
 
-#columnContainer {
+/* #columnContainer {
     background-color: bisque;
     width: 100%;
-}
+} */
 
 #searches{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 50%;
+    float: left;
 }
 
 #moreInfo{
-    background-color:blue;
+    /* background-color:blue; */
     width: 50%;
+    float: right;
 }
 
 
