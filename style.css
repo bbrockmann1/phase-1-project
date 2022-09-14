@@ -8,15 +8,6 @@
     
 }
 
-/* #append-info {
-    width: 70%;
-    height: 700px; 
-    background-color: purple; 
-    display: table;
-    margin: 0 auto;
-    
-} */
-
 #search-bar {
     width: 70%; 
     overflow: hidden; 
@@ -24,18 +15,20 @@
     text-emphasis-color: black;
 }
 
-#moreInfo{
-    float: right;
-    background-color: purple;
+#columnContainer {
+    background-color: bisque;
+    width: 100%;
+}
+
+#searches{
+    background-color: aquamarine;
     width: 50%;
 }
 
-#info{
-    float: left;
-    background-color: aquamarine;
-    width: 50%
+#moreInfo{
+    background-color:blue;
+    width: 50%;
 }
 
-#columnContainer {
-    background-color: bisque;
-}
+
+
