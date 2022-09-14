@@ -23,14 +23,36 @@ function searchBrewery(search){
     
 };
 
+// function secondFetch(search){
+//     const url = `https://api.openbrewerydb.org/breweries/${search}`;
+//     fetch(url)
+//     .then(resp => resp.json())
+//     .then(secondEle => {console.log(secondEle)})
+// };
+
 function renderResults(results){
-    results.forEach( results => {
+    results.forEach( oneBrewery => {
         // info.textContent = '';
         const element = document.createElement('li');
         element.setAttribute('id', 'newId')
-        element.textContent = results;
+        element.textContent = oneBrewery;
         info.append(element);
+        console.log(oneBrewery);
+
+        element.addEventListener('click',function(e){
+            if(e.target && e.target.id== 'newId'){
+
+                const dynamicCreate = document.createElement('li');
+                dynamicCreate.setAttribute('id', 'object');
+                brewObjs.textContent = '';
+                brewObjs.append(dynamicCreate);
+                //dynamicCreate.textContent = secondFetch('madtree-brewing-cincinnati');
+                
+            }
+        });
+
     })
+
 };
 
 
@@ -55,22 +77,10 @@ reset.addEventListener('click', event => {
 });
 
 
-function secondFetch(search){
-    const url = `https://api.openbrewerydb.org/breweries/${search}`;
-    fetch(url)
-    .then(resp => resp.json())
-    .then(secondEle => {console.log(secondEle)})
-};
-secondFetch('madtree-brewing-cincinnati')
 
-document.addEventListener('click',function(e){
-    if(e.target && e.target.id== 'newId'){
-          const dynamicCreate = document.createElement('li');
-          dynamicCreate.setAttribute('id', 'object');
-          brewObjs.append(dynamicCreate);
-          brewObjs.textContent = searchBrewery();
-     }
- });
+//secondFetch(e.target.value)
+
+
 
  //what we need:
 
