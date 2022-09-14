@@ -3,6 +3,7 @@ const searchButton = document.getElementById('submit');
 const info = document.getElementById('info');
 const reset = document.getElementById('reset-btn');
 
+
 // possibly target names by city/brewery name. Right now search is pulling up anything that includes the first two letters
 
 function searchBrewery(search){
@@ -22,8 +23,13 @@ function renderResults(results){
         // info.textContent = '';
         const element = document.createElement('li');
         element.textContent = results;
+
+        element.setAttribute("id","newId")
+
         info.append(element);
+
     })
+    
 };
 
 
@@ -46,3 +52,7 @@ reset.addEventListener('click', event => {
     // searchBar.value.textContent = '';
     window.location.reload();
 });
+
+//create event listener that clicks on names, and opens object in moreinfo.
+//first create elements for each key in objs
+//
