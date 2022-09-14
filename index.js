@@ -1,8 +1,6 @@
 const searchBar = document.getElementById('search-bar');
 const searchButton = document.getElementById('submit');
-
 const info = document.getElementById('info');
-
 const reset = document.getElementById('reset-btn');
 
 // possibly target names by city/brewery name. Right now search is pulling up anything that includes the first two letters
@@ -48,3 +46,5 @@ reset.addEventListener('click', event => {
     // searchBar.value.textContent = '';
     window.location.reload();
 });
+
+//stupuid change
