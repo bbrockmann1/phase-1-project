@@ -5,7 +5,7 @@ const info = document.getElementById('info');
 
 const reset = document.getElementById('reset-btn');
 
-
+// possibly target names by city/brewery name. Right now search is pulling up anything that includes the first two letters
 
 function searchBrewery(search){
     const url = `https://api.openbrewerydb.org/breweries/search?query=${search}`
@@ -29,6 +29,7 @@ function renderResults(results){
 };
 
 
+//possibly create a submit
 
 searchButton.addEventListener('click', e => {
     e.preventDefault();
@@ -38,6 +39,7 @@ searchButton.addEventListener('click', e => {
 searchBar.addEventListener('onkeyup', () => {
     e.preventDefault();
     searchBrewery(searchBar.value);
+    //dealay feature, or add so that it takes in more characters in search query
 });
 
 
