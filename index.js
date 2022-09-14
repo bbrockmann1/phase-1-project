@@ -1,4 +1,5 @@
 const searchBar = document.getElementById('search-bar');
+const searchButton = document.getElementById('submit');
 
 const info = document.getElementById('info');
 
@@ -29,7 +30,13 @@ function renderResults(results){
 
 
 
-searchBar.addEventListener('keyup', e => {
+searchButton.addEventListener('click', e => {
+    e.preventDefault();
+    searchBrewery(searchBar.value);
+});
+
+searchBar.addEventListener('onkeyup', () => {
+    e.preventDefault();
     searchBrewery(searchBar.value);
 });
 
