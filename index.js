@@ -2,6 +2,7 @@ const searchBar = document.getElementById('search-bar');
 const searchButton = document.getElementById('submit');
 const info = document.getElementById('info');
 const reset = document.getElementById('reset-btn');
+const newId = document.getElementById('newId');
 
 // possibly target names by city/brewery name. Right now search is pulling up anything that includes the first two letters
 
@@ -21,6 +22,7 @@ function renderResults(results){
     results.forEach( results => {
         // info.textContent = '';
         const element = document.createElement('li');
+        element.setAttribute('id', 'newId')
         element.textContent = results;
         info.append(element);
     })
@@ -46,3 +48,9 @@ reset.addEventListener('click', event => {
     // searchBar.value.textContent = '';
     window.location.reload();
 });
+
+document.addEventListener('click',function(e){
+    if(e.target && e.target.id== 'newId'){
+          console.log(e);
+     }
+ });
