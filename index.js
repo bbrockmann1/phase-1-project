@@ -1,8 +1,6 @@
 const searchBar = document.getElementById('search-bar');
 const searchButton = document.getElementById('submit');
-
 const info = document.getElementById('info');
-
 const reset = document.getElementById('reset-btn');
 
 
