@@ -17,6 +17,7 @@ function searchBrewery(search){
     .then((data) => {
         const name = data.map(element => element.name)
         renderResults(name);
+        // console.log(data)
     })
     .catch((error) => 
     console.log(error));
@@ -41,11 +42,21 @@ function renderResults(results){
 
         element.addEventListener('click',function(e){
             if(e.target && e.target.id== 'newId'){
+                e.preventDefault()
 
                 const dynamicCreate = document.createElement('li');
                 dynamicCreate.setAttribute('id', 'object');
                 brewObjs.textContent = '';
                 brewObjs.append(dynamicCreate);
+                brewObjs.textContent=oneBrewery
+                
+                const breweryName=document.createElement('li')
+                breweryName.textContent=oneBrewery.name
+                brewObjs.append(breweryName)
+
+                const breweryWebsite=document.createElement('li');
+                breweryWebsite.textContent=oneBrewery.website_url
+                brewObjs.append(breweryWebsite)
                 //dynamicCreate.textContent = secondFetch('madtree-brewing-cincinnati');
                 
             }
