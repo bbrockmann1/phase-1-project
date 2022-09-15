@@ -55,15 +55,19 @@ function renderResults(results){
                 brewObjs.textContent=oneBrewery.name
                 
                 const breweryCity=document.createElement('li')
-                breweryCity.textContent=oneBrewery.city
+                breweryCity.textContent=('City: ')+(oneBrewery.city)
                 brewObjs.append(breweryCity)
 
                 const breweryState=document.createElement('li');
-                breweryState.textContent=oneBrewery.state
+                breweryState.textContent=('State: ')+(oneBrewery.state)
                 brewObjs.append(breweryState)
 
+                const breweryPhone=document.createElement('li')
+                breweryPhone.textContent=('Phone number: ')+(oneBrewery.phone)
+                brewObjs.append(breweryPhone)
+
                 const breweryWebsite=document.createElement('li')
-                breweryWebsite.textContent=oneBrewery.website_url
+                breweryWebsite.textContent=('Website: ')+(oneBrewery.website_url)
                 brewObjs.append(breweryWebsite)
                 //dynamicCreate.textContent = secondFetch('madtree-brewing-cincinnati');
                 
